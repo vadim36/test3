@@ -1,0 +1,12 @@
+@import "../base/reset/reset.scss";
+
+@mixin title($ui-font-size) {
+  font-size: $ui-font-size;
+  font-family: sans-serif;
+}
+
+.title{
+  @include title(3rem);
+
+  margin: 10px;
+}
