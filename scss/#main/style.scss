@@ -1,12 +1,42 @@
 @import "../base/reset/reset.scss";
 
-@mixin title($ui-font-size) {
+$ui-button-width: 10%;
+$ui-button-height: 40px;
+
+@mixin ui-title($ui-font-size) {
   font-size: $ui-font-size;
   font-family: sans-serif;
 }
 
+@mixin ui-button($ui-font-size,$ui-background) {
+  font-family: sans-serif;
+  font-size: $ui-font-size;
+
+  width: $ui-button-width;
+  height: $ui-button-height;
+
+  border-radius: 10px;
+  box-shadow: 4px 5px 16px 11px rgba(34, 60, 80, 0.2);
+
+  background: $ui-background;
+  @if($ui-background == #000) {
+    color: #fff;
+  }
+
+  position: relative;
+  &:active{
+    top: 2px;
+  }
+}
+
 .title{
-  @include title(3rem);
+  @include ui-title(3rem);
+
+  margin: 10px;
+}
+
+.button{
+  @include ui-button(1.5rem, #000);
 
   margin: 10px;
 }
